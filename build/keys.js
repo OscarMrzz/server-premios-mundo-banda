@@ -26,14 +26,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 };
  */
 const config_1 = require("./config");
-console.log("==============================================");
-console.log({
-    DB_HOST: process.env.DB_HOST,
-    DB_USER: process.env.DB_USER,
-    DB_PASSWORD: process.env.DB_PASSWORD,
-    DB_NAME: process.env.DB_NAME,
-    DB_PORT: process.env.DB_PORT,
-});
 exports.default = {
     database: {
         host: config_1.DB_HOST,

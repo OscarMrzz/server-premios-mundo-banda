@@ -13,6 +13,15 @@ const pool = mysql2_1.default.createPool({
     database: keys_1.default.database.database,
     port: Number(keys_1.default.database.port)
 });
+console.log("==============================================");
+console.log({
+    DB_HOST: process.env.DB_HOST,
+    DB_USER: process.env.DB_USER,
+    DB_PASSWORD: process.env.DB_PASSWORD,
+    DB_NAME: process.env.DB_NAME,
+    DB_PORT: process.env.DB_PORT,
+});
+"";
 // Obtener una conexión del pool
 pool.getConnection((error, connection) => {
     if (error) {

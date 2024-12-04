@@ -12,9 +12,11 @@ import votacionesRouter from "./router/votacionesrouter";
 
 
 
+
 class Server {
     public app: Application;
     constructor() {
+
         this.app = express();
         this.config();
         this.routers();

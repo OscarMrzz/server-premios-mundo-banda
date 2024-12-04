@@ -8,12 +8,22 @@ const dotenv_1 = __importDefault(require("dotenv"));
 if (process.env.NODE_ENV !== "production") {
     dotenv_1.default.config(); // Carga el archivo .env solo si no estamos en producción
 }
-exports.default = {
+/* export default {
     database: {
-        host: process.env.DB_HOST,
+        host: process.env.DB_HOST,   // Asegúrate de que las variables estén bien definidas en el archivo .env
         user: process.env.DB_USER,
         password: process.env.DB_PASSWORD,
         database: process.env.DB_NAME,
         port: process.env.DB_PORT,
+    }
+};
+ */
+exports.default = {
+    database: {
+        host: "mysql.railway.internal",
+        user: "root",
+        password: "sdxnPWePqOMxPqNQXLsnYUjKdwOKAWxG",
+        database: "railway",
+        port: 3306,
     }
 };

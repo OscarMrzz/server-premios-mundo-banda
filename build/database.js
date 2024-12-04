@@ -7,11 +7,11 @@ const mysql2_1 = __importDefault(require("mysql2"));
 const keys_1 = __importDefault(require("./keys"));
 // Configurar el pool con el puerto convertido a número
 const pool = mysql2_1.default.createPool({
-    host: keys_1.default.database.host,
-    user: keys_1.default.database.user,
-    password: keys_1.default.database.password,
-    database: keys_1.default.database.database,
-    port: Number(keys_1.default.database.port)
+    host: keys_1.default.host,
+    user: keys_1.default.user,
+    password: keys_1.default.password,
+    database: keys_1.default.database,
+    port: Number(keys_1.default.port)
 });
 // Obtener una conexión del pool
 pool.getConnection((error, connection) => {
